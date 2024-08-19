@@ -1,0 +1,24 @@
+/* src/components/Home.css */
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4; /* Light grey background */
+    color: #333; /* Dark text color */
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .home-container h1 {
+    font-size: 36px;
+    color: #2c3e50; /* Darker grey for the heading */
+    margin-bottom: 20px;
+  }
+  
+  .home-container p {
+    font-size: 18px;
+    color: #7f8c8d; /* Lighter grey for the text */
+  }
+  
