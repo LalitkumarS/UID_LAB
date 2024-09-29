@@ -1,0 +1,24 @@
+/* src/Counter.css */
+body {
+    background-color: #e3f2fd; /* Soft light blue background */
+}
+
+.hover-effect {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.hover-effect:hover {
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+.btn-success.hover-effect:hover {
+    background-color: #28a745; /* Darker green for success button hover */
+}
+
+.btn-danger.hover-effect:hover {
+    background-color: #c82333; /* Darker red for danger button hover */
+}
+
+.btn-secondary.hover-effect:hover {
+    background-color: #6c757d; /* Darker gray for secondary button hover */
+}
