@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'animate.css'; // for animation library
-import './App.css'; // External CSS for further custom styling
 
 const ItemForm = () => {
   const [items, setItems] = useState([]);
@@ -23,16 +22,16 @@ const ItemForm = () => {
   };
 
   return (
-    <div className="form-container mx-auto animate__animated animate__fadeIn bg-form rounded-lg shadow-md p-6">
-      <h2 className="text-center font-bold mb-4 text-lg text-gray-700">Add New Item</h2>
+    <div className="container mt-5 p-4 bg-light shadow-lg rounded animate__animated animate__fadeIn">
+      <h2 className="text-center font-bold mb-4">Add New Item</h2>
       
       {/* Form Section */}
-      <form onSubmit={handleSubmit} className="bg-white p-4 rounded-lg shadow-sm animate__animated animate__zoomIn">
+      <form onSubmit={handleSubmit} className="bg-white p-5 rounded shadow-sm animate__animated animate__zoomIn">
         <div className="mb-3">
           <label htmlFor="name" className="form-label">Item Name</label>
           <input
             type="text"
-            className="form-control custom-input"
+            className="form-control"
             id="name"
             name="name"
             value={form.name}
@@ -44,13 +43,13 @@ const ItemForm = () => {
         <div className="mb-3">
           <label htmlFor="description" className="form-label">Description</label>
           <textarea
-            className="form-control custom-input"
+            className="form-control"
             id="description"
             name="description"
             value={form.description}
             onChange={handleChange}
             placeholder="Enter item description"
-            rows="2"
+            rows="3"
           ></textarea>
         </div>
 
@@ -58,7 +57,7 @@ const ItemForm = () => {
           <label htmlFor="quantity" className="form-label">Quantity</label>
           <input
             type="number"
-            className="form-control custom-input"
+            className="form-control"
             id="quantity"
             name="quantity"
             value={form.quantity}
@@ -68,13 +67,13 @@ const ItemForm = () => {
           />
         </div>
 
-        <button type="submit" className="btn btn-primary w-full custom-button">Add Item</button>
+        <button type="submit" className="btn btn-primary w-full">Add Item</button>
       </form>
 
       {/* Item List Section */}
       {items.length > 0 && (
         <div className="mt-5 animate__animated animate__fadeInUp">
-          <h3 className="text-center mb- text-lg text-gray-500">Item List</h3>
+          <h3 className="text-center mb-4">Item List</h3>
           <ul className="list-group">
             {items.map((item, index) => (
               <li
